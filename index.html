@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> B-Clean Laundry </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Qondri HTML Template For Londri" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/qondri-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/qondri.css" />
+    <link rel="stylesheet" href="assets/css/qondri-responsive.css" />
+  <style>
+
+:root{
+  --qondri-font: "Barlow", sans-serif;
+  --qondri-gray: #747f8e;
+  --qondri-gray-rgb: 116, 127, 142;
+  --qondri-white: #ffffff;
+  --qondri-white-rgb: 255, 255, 255;
+  --qondri-black: #183862;
+  --qondri-black-rgb: 24, 56, 98;
+  --qondri-base: #89b92e;
+  --qondri-base-rgb: 137, 185, 46;
+  --qondri-primary: #f2f5f8;
+  --qondri-primary-rgb: 242, 245, 248;
+  --qondri-bdr-color: #dee3e8;
+  --qondri-bdr-color-rgb: 222, 227, 232;
+}
+
+    .beer-slider {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.beer-slider *, .beer-slider:before, .beer-slider:after,
+.beer-slider *:before,
+.beer-slider *:after {
+  box-sizing: border-box;
+}
+.beer-slider svg {
+  vertical-align: bottom;
+}
+
+.beer-reveal {
+  --width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-clip-path: polygon(0 0, var(--width) 0, var(--width) 100%, 0 100%);
+          clip-path: polygon(0 0, var(--width) 0, var(--width) 100%, 0 100%);
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.beer-range {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  height: 6rem;
+  margin: 0;
+  left: -1px;
+  width: calc(100% + 2px);
+  cursor: pointer;
+  -webkit-appearance: slider-horizontal !important;
+  -moz-appearance: none;
+  opacity: 0;
+  touch-action: auto;
+}
+.beer-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 300vh;
+}
+.beer-range::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 300vh;
+}
+.beer-range::-ms-tooltip {
+  display: none;
+}
+
+.beer-ready,
+.beer-ready image,
+.beer-ready .beer-reveal,
+.beer-ready .beer-handle {
+  opacity: 1;
+}
+
+.beer-slider {
+  width: 100%;
+  height: 100vh;
+}
+
+.ctnr {
+  height: 100vh;
+}
+
+.beer-handle {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  background: white;
+  color: #000;
+  transition: opacity 1s;
+  transform: translateX(-50%);
+  height: 6rem;
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  -webkit-clip-path: url(#svgPath);
+          clip-path: url(#svgPath);
+}
+.beer-handle:before, .beer-handle:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  border-top: solid 2px;
+  border-left: solid 2px;
+  transform-origin: 0 0;
+}
+.beer-handle:before {
+  left: calc(50% - 20px);
+  transform: rotate(-45deg);
+}
+.beer-handle:after {
+  right: calc(50% - 30px);
+  transform: rotate(135deg);
+}
+
+body {
+  font-family: var(--qondri-font);
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: Calistoga;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.b {
+  position: absolute;
+  top: 2rem;
+  width: 50%;
+  max-width: 700px;
+}
+
+.b * {
+  opacity: 0;
+  transform: translate3d(0, 2rem, 0);
+  transition: 1s;
+}
+
+.b1 {
+  top: 18rem;
+  left: 4rem;
+  z-index: 1;
+  color: white;
+}
+
+.b2 {
+  top: 18rem;
+  right: 4rem;
+  z-index: 1;
+  color: white;
+}
+
+.more .b1 * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.less .b2 * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.ctnr:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ctnr-summer:after {
+  background: linear-gradient(135deg, #2a2d4e, transparent);
+}
+
+.ctnr-winter:after {
+  background: linear-gradient(-135deg, #2a2d4e, transparent);
+}
+
+image {
+  transition: 0.6s;
+  opacity: 0;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+@media (max-width: 37.5em) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .b1 {
+    left: 2rem;
+  }
+
+  .b2 {
+    right: 2rem;
+  }
+
+  .ctnr-summer:after {
+    background: linear-gradient(180deg, #2a2d4e, transparent 120%);
+  }
+}
+main {
+  margin: 2rem auto;
+  max-width: 48rem;
+  padding: 0 1rem;
+}
+  </style>
+</head>
+<body>
+  <div id="slider" class="beer-slider" data-start="75">
+  <div class="ctnr ctnr-winter">
+    <svg class="winter" width="100%" height="100%" viewBox="0 0 600 361" preserveAspectRatio="xMidYMid slice" data-beer-src="assets/images/pilihan2.jpg" aria-labelledby="title1" aria-role="img">
+      <title id="title1">Cibubur</title>
+      <image xlink:href="assets/images/pilihan2.jpg" x="0" y="0" width="100%" height="100%"></image>
+
+    </svg>
+    <section class="b b2">
+      <h2 style="color: #fff;font-family: var(--qondri-font)">Bclean Laundry Cibubur</h2>
+      <br>
+      <p>Kami Menyediakan cabang Bagi Anda Yang Dekat Dengan Daerah Cibubur</p>
+      <a href="cibubur.html" class="thm-btn">Laundry Cibubur<span class="icon-right-arrow"></span></a>
+    </section>
+
+  </div>
+  <div class="beer-reveal">
+    <div class="ctnr ctnr-summer">
+      <svg width="100%" height="100%" viewBox="0 0 600 361" preserveAspectRatio="xMidYMid slice" data-beer-src="assets/images/pilihan1.jpg" aria-labelledby="title2" aria-role="img">
+        <title id="title2">Rajawati</title>
+        <image xlink:href="assets/images/pilihan1.jpg" x="0" y="0" width="100%" height="100%"></image>
+      </svg>
+      <section class="b b1">
+        <h2 style="color:#fff; font-family: var(--qondri-font);">Bclean Laundry Rajawati</h2>
+        <br>
+        <p>Kami Menyediakan cabang Bagi Anda Yang Dekat Dengan Daerah Rajawati</p>
+        <a href="rajawati.html" class="thm-btn">Laundry Rajawati<span class="icon-right-arrow"></span></a>
+      </section>
+    </div>
+
+  </div>
+
+</div>
+<svg>
+  <defs>
+    <clipPath id="svgPath" clipPathUnits="objectBoundingBox" transform="scale(0.00083 0.0075)">
+      <path d="M1397,490H204c263,0,160-32,371-33,191.52-.91,150.49-135.14,225-92C990,475,1144,490,1397,490Z" transform="translate(-178 -350.46)" />
+    </clipPath>
+  </defs>
+</svg>
+
+<script>
+  class BeerSlider {
+  constructor(element, { start = "50" } = {}) {
+    this.start = parseInt(start) ?
+    Math.min(100, Math.max(0, parseInt(start))) :
+    50;
+    this.element = element;
+    this.revealContainer = this.element.children[1];
+    this.revealElement = this.revealContainer.children[0];
+    this.range = this.addElement("input", {
+      type: "range",
+      class: `beer-range`,
+      "aria-label": "Percent of revealed content",
+      "aria-valuemin": "0",
+      "aria-valuemax": "100",
+      "aria-valuenow": this.start,
+      value: this.start,
+      min: "0",
+      max: "100" });
+
+    this.handle = this.addElement("span", {
+      class: `beer-handle` });
+
+    this.onImagesLoad();
+  }
+  init() {
+    this.element.classList.add(`beer-ready`);
+    this.move();
+    this.addListeners();
+  }
+  loadingImg(src) {
+    return new Promise((resolve, reject) => {
+      if (!src) {
+        resolve();
+      }
+      const img = new Image();
+      img.onload = () => resolve();
+      img.onerror = () => reject();
+      img.src = src;
+    });
+  }
+  loadedBoth() {
+    const mainImageSrc =
+    this.element.children[0].src ||
+    this.element.children[0].getAttribute(`data-beer-src`);
+    const revealImageSrc =
+    this.revealElement.src ||
+    this.revealElement.getAttribute(`data-beer-src`);
+    return Promise.all([
+    this.loadingImg(mainImageSrc),
+    this.loadingImg(revealImageSrc)]);
+
+  }
+  onImagesLoad() {
+    if (!this.revealElement) {
+      return;
+    }
+    this.loadedBoth().then(
+    () => {
+      this.init();
+    },
+    () => {
+      console.error("Some errors occurred and images are not loaded.");
+    });
+
+  }
+  addElement(tag, attributes) {
+    const el = document.createElement(tag);
+    Object.keys(attributes).forEach(key => {
+      el.setAttribute(key, attributes[key]);
+    });
+    this.element.appendChild(el);
+    return el;
+  }
+  addListeners() {
+    const eventTypes = ["input", "change"];
+    eventTypes.forEach(i => {
+      this.range.addEventListener(i, () => {
+        this.move();
+      });
+    });
+  }
+  move() {
+    this.revealContainer.style.setProperty("--width", `${this.range.value}%`);
+    this.handle.style.left = `${this.range.value}%`;
+    this.range.setAttribute("aria-valuenow", this.range.value);
+    if (this.range.value > 55) {
+      this.element.classList.add("more");
+    } else {
+      this.element.classList.remove("more");
+      if (this.range.value < 45) {
+        this.element.classList.add("less");
+      } else {
+        this.element.classList.remove("less");
+      }
+    }
+  }}
+
+
+new BeerSlider(document.getElementById("slider"), { start: 30 });
+</script>
+</body>
+</html>
